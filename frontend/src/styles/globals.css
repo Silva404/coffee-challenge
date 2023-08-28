@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-footer {
+  background-color: #191919;
+  background-image: url("/form-footer.png");
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  background-size: 150px;
+}
