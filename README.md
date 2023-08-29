@@ -3,16 +3,29 @@
 [Frontend](https://clone-coffee-challenge.vercel.app)
 [Backend](https://coffee-backend-2.onrender.comes)
 
-Endpoints available:
-#GET
+## Endpoints available:
+
+# GET
+
+```bash
 curl --location --request GET 'https://coffee-backend-2.onrender.comes/coffee'
+```
+
 To search by name:
+
+```bash
 curl --location --request GET 'https://coffee-backend-2.onrender.comes/coffee?name=BrenoIsAGoodHire'
+```
 
 To search by coffee type(Arabic or Robusta):
-curl --location --request GET 'https://coffee-backend-2.onrender.comes/coffee?type=Hired'
 
-#POST
+```bash
+curl --location --request GET 'https://coffee-backend-2.onrender.comes/coffee?type=Hired'
+```
+
+# POST
+
+```bash
 curl --location --request POST 'https://coffee-backend-2.onrender.comes/coffee' \
 --header 'Content-Type: application/json' \
 --data-raw '{
@@ -22,6 +35,7 @@ curl --location --request POST 'https://coffee-backend-2.onrender.comes/coffee' 
 "type": "Arabic",
 "image": "https://url.com"
 }'
+```
 
 ### Installation
 
