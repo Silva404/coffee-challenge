@@ -8,19 +8,19 @@
 # GET
 
 ```bash
-curl --location --request GET 'https://coffee-backend-2.onrender.comes/coffee'
+curl --location --request GET 'https://coffee-backend-2.onrender.com/coffee'
 ```
 
 To search by name:
 
 ```bash
-curl --location --request GET 'https://coffee-backend-2.onrender.comes/coffee?name=BrenoIsAGoodHire'
+curl --location --request GET 'https://coffee-backend-2.onrender.com/coffee?name=BrenoIsAGoodHire'
 ```
 
 To search by coffee type(Arabic or Robusta):
 
 ```bash
-curl --location --request GET 'https://coffee-backend-2.onrender.comes/coffee?type=Hired'
+curl --location --request GET 'https://coffee-backend-2.onrender.com/coffee?type=Hired'
 ```
 
 # POST
