@@ -16,6 +16,7 @@ export class CoffeeQueryORM implements CoffeeQuery {
         name: criteria.name,
       },
       take: 6,
+      order: { createdAt: 'DESC' },
     });
   }
 }

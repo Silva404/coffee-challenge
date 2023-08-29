@@ -1,5 +1,28 @@
 # MVST Challenge
 
+[Frontend](https://clone-coffee-challenge.vercel.app)
+[Backend](https://coffee-backend-2.onrender.comes)
+
+Endpoints available:
+#GET
+curl --location --request GET 'https://coffee-backend-2.onrender.comes/coffee'
+To search by name:
+curl --location --request GET 'https://coffee-backend-2.onrender.comes/coffee?name=BrenoIsAGoodHire'
+
+To search by coffee type(Arabic or Robusta):
+curl --location --request GET 'https://coffee-backend-2.onrender.comes/coffee?type=Hired'
+
+#POST
+curl --location --request POST 'https://coffee-backend-2.onrender.comes/coffee' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+"name": "Capuccino",
+"description": "Great coffee",
+"price": 12,
+"type": "Arabic",
+"image": "https://url.com"
+}'
+
 ### Installation
 
 To run the backend:
@@ -41,10 +64,6 @@ I also used CQRS principles to my application module mainly because i like to ma
 This whole backend is just an overengineering app mainly because i want to showcase my skills but if the scope of the project was this small and it was a real world scenario
 would just have it as some endpoints in NextJS or a small mvc, my whole domain could be easily replace with some `zod` schema if scalability wasnt a concern.
 About the TypeORM, its been a while since i didnt used a js orm so im outdated and need to study the new ones so i choose it because i wanted a ORM with data mapper and repository pattern which i think works really well with this architecture and this was the only one that i know and didnt had much time to research them.
-
-### What i would improve
-
-Deploy it, i left some machines running on railway and fly.io so i dont have any credits anymore so i just left this part out of the project mainly because it would take more time to reasearch other ones or create new emails and accounts to get this up and running i already have the docker image so it would be really easy to do it, even tho this docker image is not optimized for productionm, keep this in mind in the whole node image on dev and for production we should use some alpine image for size and simplicity.
 
 We're thrilled that you've made it to our MVST coding challenge! We are rooting for your success and hope to meet you in the challenge review! 🚀 If you have anything that we can help you with, just open an issue in the Github repo that was provided to you.
 

@@ -4,7 +4,7 @@ import { InvalidCoffeeType } from './Exception/InvalidCoffeeType';
 import { DescriptionTooLong } from './Exception/DescriptionTooLong';
 import { DescriptionTooShort } from './Exception/DescriptionTooShort';
 import { Name } from './Name';
-import { Column, Entity, PrimaryColumn } from 'typeorm';
+import { Column, CreateDateColumn, Entity, PrimaryColumn } from 'typeorm';
 
 export type CoffeeProps = {
   name: Name;
@@ -39,6 +39,9 @@ export class Coffee {
 
   @Column()
   public type: string;
+
+  @CreateDateColumn({ name: 'created_at' })
+  createdAt: Date = new Date();
 
   constructor(private props: CoffeeProps, id?: UUID) {
     this.validate();

@@ -1,4 +1,4 @@
-import { Notification as Notificatio } from "@/stores/notifications";
+import { Notification as NotificationType } from "@/stores/notifications";
 import {
   CheckCircledIcon,
   Cross1Icon,
@@ -7,7 +7,7 @@ import {
 import { motion } from "framer-motion";
 
 type NotificationProps = {
-  notification: Notificatio;
+  notification: NotificationType;
   onDismiss: (id: string) => void;
 };
 
