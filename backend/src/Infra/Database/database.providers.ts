@@ -9,7 +9,7 @@ export const databaseProviders = [
         type: 'postgres',
         url: process.env.DATABASE_URL,
         entities: [Coffee],
-        synchronize: true,
+        synchronize: false,
         entitySkipConstructor: true,
       });
 

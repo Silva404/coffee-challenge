@@ -44,7 +44,7 @@ About the TypeORM, its been a while since i didnt used a js orm so im outdated a
 
 ### What i would improve
 
-- Deploy it, i left some machines running on railway and fly.io so i dont have any credits anymore so i just left this part out of the project mainly because it would take more time to reasearch other ones or create new emails and accounts to get this up and running i already have the docker image so it would be really easy to do it, even tho this docker image is not optimized for productionm, keep this in mind in the whole node image on dev and for production we should use some alpine image for size and simplicity.
+Deploy it, i left some machines running on railway and fly.io so i dont have any credits anymore so i just left this part out of the project mainly because it would take more time to reasearch other ones or create new emails and accounts to get this up and running i already have the docker image so it would be really easy to do it, even tho this docker image is not optimized for productionm, keep this in mind in the whole node image on dev and for production we should use some alpine image for size and simplicity.
 
 We're thrilled that you've made it to our MVST coding challenge! We are rooting for your success and hope to meet you in the challenge review! 🚀 If you have anything that we can help you with, just open an issue in the Github repo that was provided to you.
 

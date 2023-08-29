@@ -12,6 +12,18 @@ To run the backend:
 cd backend && make dev
 ```
 
+Run the migrations
+
+```bash
+npm run migration:run
+```
+
+Run the seeds
+
+```bash
+npm run seeds:run
+```
+
 To run the backend tests:
 
 ```bash

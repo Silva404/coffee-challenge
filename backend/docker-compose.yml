@@ -10,7 +10,7 @@ services:
     volumes:
       - .:/app
     env_file:
-      - .env
+      - .env.prod
     ports:
       - 4000:4000
     depends_on:
@@ -21,7 +21,7 @@ services:
     container_name: db
     image: postgres
     env_file:
-      - .env
+      - .env.prod
     ports:
       - 5432:5432
     healthcheck:

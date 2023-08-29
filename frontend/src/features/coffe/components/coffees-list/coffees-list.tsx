@@ -22,32 +22,53 @@ export function CoffeesList({ tab }: { tab: string }) {
     );
   }
 
+  if (coffees.isLoading) {
+    return (
+      <ul className="w-full max-w-6xl">
+        <div
+          className="grid grid-cols-1 p-6 gap-6 lg:grid-cols-3 lg:gap-x-7 lg:gap-y-10 w-full"
+          data-testid="coffee-skeletons"
+        >
+          {Array(MAX_AMOUNT_OF_COFFES)
+            .fill(0)
+            .map((_, index) => (
+              <div
+                key={index}
+                className="animate-pulse w-full bg-[hsl(210 40% 96.1%)]  rounded p-12 bg-white/10 h-[472px] hover:ring-2 ring-white/10"
+              />
+            ))}
+        </div>
+      </ul>
+    );
+  }
+
   return (
-    <ul className="w-full max-w-6xl">
-      <div
-        className="grid grid-cols-1 p-6 gap-6 lg:grid-cols-3 lg:gap-x-7 lg:gap-y-10 w-full"
-        data-testid={coffees.isLoading ? "coffee-skeletons" : ""}
-      >
-        {coffees.isLoading ? (
-          <>
-            {Array(MAX_AMOUNT_OF_COFFES)
-              .fill(0)
-              .map((_, index) => (
-                <div
-                  key={index}
-                  className="animate-pulse w-full bg-[hsl(210 40% 96.1%)]  rounded p-12 bg-white/10 h-[472px] hover:ring-2 ring-white/10"
-                />
-              ))}
-          </>
+    coffees.isSuccess && (
+      <>
+        {coffees.data.length > 0 ? (
+          <ul className="w-full max-w-6xl">
+            <div className="grid grid-cols-1 p-6 gap-6 lg:grid-cols-3 lg:gap-x-7 lg:gap-y-10 w-full">
+              <AnimatePresence>
+                {coffees.isSuccess &&
+                  coffees.data.map((coffee) => (
+                    <CoffeCard key={coffee.id} coffee={coffee} />
+                  ))}
+              </AnimatePresence>
+            </div>
+          </ul>
         ) : (
-          <AnimatePresence>
-            {coffees.isSuccess &&
-              coffees.data.map((coffee) => (
-                <CoffeCard key={coffee.id} coffee={coffee} />
-              ))}
-          </AnimatePresence>
+          <div className="container flex items-center text-center px-6 py-12 mx-auto text-white font-sans">
+            <div className="flex flex-col items-center max-w-sm mx-auto text-center">
+              <h1 className="mt-3 text-2xl font-semibold text-white/90 dark:text-white md:text-3xl">
+                No Coffee found.
+              </h1>
+              <p className="mt-4 text-gray-500 dark:text-gray-400">
+                Please add a new coffee
+              </p>
+            </div>
+          </div>
         )}
-      </div>
-    </ul>
+      </>
+    )
   );
 }

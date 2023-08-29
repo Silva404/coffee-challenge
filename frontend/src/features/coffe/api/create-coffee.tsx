@@ -20,6 +20,7 @@ export function useCreateCoffee(props: Props) {
     mutationFn: (data: CreateCoffeeSchema) => createCoffee(data),
     onSuccess: (_, data) => {
       queryClient.invalidateQueries({ queryKey: ["coffees", data.type] });
+      queryClient.invalidateQueries({ queryKey: ["coffees"] });
       props.onSuccess();
     },
     onError: (err) => {
