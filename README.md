@@ -1,4 +1,4 @@
-# MVST Challenge
+# Challenge
 
 [Frontend](https://clone-coffee-challenge.vercel.app)
 [Backend](https://coffee-backend-2.onrender.comes)
@@ -122,76 +122,3 @@ Don't worry about uploading the image, get a URL from Google, an image repositor
 **⚠️ IMPORTANT ⚠️**
 
 Before adding a new Coffee, you should validate if an existing record with the same `name` already exists.
-
-### Finishing the task
-
-1. Create a Pull Request with the coding challenge.
-2. Tell MVST HR Team that you are done with it
-3. That is it :)
-
-### ⚠️ Rules
-
-1. The codebase provided is there to reduce some decision fatigue so you can focus on the coding. Please keep in mind that the decisions of folder structure, backend layers, architecture and other decisions have to be your own (‼️).
-2. Feel free to add any additional JS libraries and tell us in the README file why you chose them.
-3. The frontend has to be built with React. Next.js is there to help you have a quick start and focus on the coding. You can replace it with React Vite or similar if you feel like it would be faster.
-4. The data MUST be persisted in a database.
-5. We love NestJS so we provided some basic backend boilerplate, but it is your choice to use it. You are free to use Next.js as a fullstack framework.
-6. Provide a seeding mechanism to populate your DB.
-7. Match the design in the Figma file.
-8. If you don't feel comfortable using the `app` folder introduced in Next.js 13, you are allowed to use the `page` folder.
-
-### 🔍 What we will check
-
-To be transparent, these are some things we consider important in the challenge:
-
-1. The final outcome. The challenge is completed if the list of items is rendered on the frontend while fetching data from a backend server and we can add items to the list through the form.
-2. General skills of programming. Besides checking the outcome of your running project, we will check your code for the following: readability, organization, robustness, layering, reusability, and extensibility.
-3. Application of best practices and design patterns.
-4. The outcome in comparison with the design.
-
-### Extra Points
-
-So you are finished and feel like showing us some more? Here are a few things that we'd love to see:
-
-1. Testing. Your choice of what to test and how.
-2. Add some CSS animations or use Framer Motion
-3. If you haven't already, make the frontend SEO friendly
-4. Deploy your application
-
-## FAQ
-
----
-
-- I am not familiar with Next.js and NestJS
-
-  We don't expect you to know all the internals of these frameworks. What we do care about is the quality and the outcome of what you created. For the frontend, focus more on developing a good React application rather than the bells and whistles of Next.js. For the backend part, focus more on qualitative aspects like clean code and architecture and not NestJS specifics. The same applies if you choose to use Next.js as a fullstack framework.
-
-- I don't want to use tailwind
-
-  Feel free to use pure CSS (we love it), styled-components, CSS preprocessors like SASS or any other library that you are comfortable with. Just don't cheat and use a full-on component library like MaterialUI or Bootstrap 😉 We need to know your CSS skills!
-
-- The starter code won't start
-
-  Check that you are using the correct node versions. We have provided an `.nvmrc` file so you can set it to Node 18 if you are using `nvm`. Also, make sure that you have docker installed if you want to use the DB starter script provided by us.
-
-- Some project dependencies are out of date. Can I update them?
-
-  Absolutely! Also ping us and let us know about this.
-
-## Feedback
-
----
-
-### What would you improve if given more time?
-
-Please fill
-
-### How was your experience doing this challenge?
-
-Please fill
-
----
-
-Thanks and have a great challenge! 🔥
-
-MVST Team
